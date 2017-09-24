@@ -10,6 +10,8 @@
 
   <!-- ========== Css Files ========== -->
   <link href="css/root.css" rel="stylesheet">
+  <link href="css/myCss.css" rel="stylesheet">
+
 
 
   </head>
@@ -58,8 +60,8 @@
 <ul class="sidebar-panel nav">
   <li><a href="index.html"><span class="icon color5"><i class="fa fa-home"></i></span>添加预约</a></li>
   <li><a href="search.html"><span class="icon color6"><i class="fa fa-th"></i></span>查询预约</a></li>
-  <li><a href="search.html"><span class="icon color6"><i class="fa fa-calendar-o"></i></span>预览预约</a></li>
-  <li><a href="search.html"><span class="icon color6"><i class="fa fa-file-text-o"></i></span>报表</a></li>
+  <li><a href="preview.html"><span class="icon color6"><i class="fa fa-calendar-o"></i></span>预览预约</a></li>
+  <li><a href="report.html"><span class="icon color6"><i class="fa fa-file-text-o"></i></span>报表</a></li>
 </ul>
 
 
@@ -78,11 +80,11 @@
         <div class="panel panel-default">
 
           <div class="panel-title">
-            Textboxes
+            添加预约
             <ul class="panel-tools">
-              <li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
-              <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
-              <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+              <!--<li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>-->
+              <!--<li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>-->
+              <!--<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>-->
             </ul>
           </div>
 
@@ -90,115 +92,141 @@
             <form class="form-horizontal">
 
               <div class="form-group">
-                <label class="col-sm-2 control-label form-label">Static Field</label>
-                <div class="col-sm-10">
-                  <p class="form-control-static">email@example.com</p>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="input002" class="col-sm-2 control-label form-label">Normal</label>
+                <label for="input002" class="col-sm-2 control-label form-label">姓名*</label>
                 <div class="col-sm-10">
                   <input type="text" class="form-control" id="input002">
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="input001" class="col-sm-2 control-label form-label">Help Text</label>
+                <label for="input002" class="col-sm-2 control-label form-label">性别*</label>
+                <div class="col-sm-10">
+                  <div class="radio radio-info radio-inline">
+                    <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="">
+                    <label for="inlineRadio1">男</label>
+                  </div>
+
+                  <div class="radio radio-inline radio-info">
+                    <input type="radio" id="inlineRadio2" value="option1" name="radioInline">
+                    <label for="inlineRadio2">女</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="input002" class="col-sm-2 control-label form-label">年龄*</label>
+                <div class="col-sm-10">
+                    <select class="selectpicker" style="display: none;">
+                      <option>18</option>
+                      <option>19</option>
+                      <option>20</option>
+                      <option>21</option>
+                      <option>22</option>
+                      <option>23</option>
+                    </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="input002" class="col-sm-2 control-label form-label">身份证或护照*</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="input002" class="col-sm-2 control-label form-label">手机*</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label form-label">联系地址</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" rows="3" id="textarea1" placeholder=""></textarea>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="input002" class="col-sm-2 control-label form-label">国家*</label>
+                <div class="col-sm-10">
+                  <select class="selectpicker" style="display: none;">
+                    <option>美国</option>
+                    <option>英国</option>
+                    <option>加拿大</option>
+                    <option>澳洲</option>
+                    <option>新西兰</option>
+                    <option>法国</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="input001" class="col-sm-2 control-label form-label">IME号</label>
                 <div class="col-sm-10">
                   <input type="text" class="form-control" id="input001">
-                  <span id="helpBlock" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                  <span id="helpBlock" class="help-block">加拿大的出国体检，如果您有IME号，必须在这里输入，否则无法顺利进行体验。</span>
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="input2" class="col-sm-2 control-label form-label">Rounded</label>
+                <label for="input001" class="col-sm-2 control-label form-label">预约日期</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control form-control-radius" id="input2">
+                      <div class="control-group">
+                        <div class="controls">
+                          <div class="input-prepend input-group">
+                            <span class="add-on input-group-addon"><i class="fa fa-calendar"></i></span>
+                            <input type="text" id="date-picker" class="form-control active" value="">
+                          </div>
+                        </div>
+                      </div>
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="input3" class="col-sm-2 control-label form-label">Password</label>
+                <label for="input001" class="col-sm-2 control-label form-label">预约时段</label>
                 <div class="col-sm-10">
-                  <input type="password" class="form-control" id="input3" placeholder="Password">
-                </div>
-              </div>
 
-              <div class="form-group">
-                <label for="input4" class="col-sm-2 control-label form-label">Disable</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="input4" placeholder="Disable Input" disabled="">
-                </div>
-              </div>
-
-              <div class="form-group has-success">
-                <label for="input6" class="col-sm-2 control-label form-label">Input with success</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="input6">
-                </div>
-              </div>
-
-              <div class="form-group has-warning">
-                <label for="input7" class="col-sm-2 control-label form-label">Input with warning</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="input7">
-                </div>
-              </div>
-
-              <div class="form-group has-error">
-                <label for="input8" class="col-sm-2 control-label form-label">Input with warning</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="input8">
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label class="col-sm-2 control-label form-label">Readonly input</label>
-                <div class="col-sm-10">
-                  <input class="form-control" type="text" placeholder="Readonly input here…" readonly="">
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="exampleInputAmount" class="col-sm-2 control-label form-label">With Icons</label>
-                <div class="col-sm-10">
-                  <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-                  <div class="input-group">
-                    <div class="input-group-addon"><i class="fa fa-usd"></i></div>
-                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
-                    <div class="input-group-addon">.00</div>
+                  <div class="row" id="period-time">  <!--灰色为不可预约，蓝色为可预约，绿色为预约的当前项，点击逻辑，当前页面搜索ID在下面-->
+                    <div class="col-sm-2">
+                      <div class="time">8.30-9.00</div>
+                      <div class="btn disabled">不可预约</div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="time">8.30-9.00</div>
+                      <div class="btn disabled">不可预约</div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="time">8.30-9.00</div>
+                      <div class="btn btn-default">可预约</div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="time">8.30-9.00</div>
+                      <div class="btn btn-success">已预约</div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="time">8.30-9.00</div>
+                      <div class="btn disabled">不可预约</div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="time">8.30-9.00</div>
+                      <div class="btn disabled">不可预约</div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="time">8.30-9.00</div>
+                      <div class="btn disabled">不可预约</div>
+                    </div>
                   </div>
+
                 </div>
               </div>
-
-              <div class="form-group">
-                <label for="exampleInputAmount2" class="col-sm-2 control-label form-label">Another With Icons</label>
-                <div class="col-sm-10">
-                  <label class="sr-only" for="exampleInputAmount2">Login</label>
-                  <div class="input-group">
-                    <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                    <input type="text" class="form-control" id="exampleInputAmount2" placeholder="Username">
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label class="col-sm-2 control-label form-label">Textarea</label>
-                <div class="col-sm-10">
-                  <textarea class="form-control" rows="3" id="textarea1" placeholder="Type your message..."></textarea>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label class="col-sm-2 control-label form-label">With a Line</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control form-control-line" placeholder="What is your name?">
-                </div>
-              </div>
-
 
             </form>
+
+            <div class="form-group center"> <!--form外避免提交form，暂时不清楚后台处理情况-->
+                <button type="" class="btn btn-default" id="addNew">添加预约</button>
+            </div>
 
           </div>
 
@@ -238,7 +266,7 @@ Bootstrap Toggle
 ================================================ -->
 <script type="text/javascript" src="js/bootstrap-toggle/bootstrap-toggle.min.js"></script>
 
-
+  <script src="js/sweet-alert/sweet-alert.min.js"></script>
 
 <!-- ================================================
 Easy Pie Chart
@@ -263,7 +291,27 @@ Moment.js
 ================================================ -->
 <script type="text/javascript" src="js/moment/moment.min.js"></script>
 
+  <script type="text/javascript" src="js/date-range-picker/daterangepicker.js"></script>
 
+  <script type="text/javascript">
+      $(document).ready(function() {
+          $('#date-picker').daterangepicker({ singleDatePicker: true }, function(start, end, label) {
+              console.log(start.toISOString(), end.toISOString(), label);
+          });
+
+          /*点击时段的逻辑*/
+          var _periodTime = $("#period-time");
+          _periodTime.find('.btn:not(.disabled)').on('click',function () {
+              _periodTime.find('.btn-success').removeClass('btn-success').addClass('btn-default').html('可预约');
+              $(this).removeClass('btn-default').addClass('btn-success').html('已预约')
+          });
+          /*点击提交*/
+          document.querySelector('#addNew').onclick = function(){
+              swal("提交成功", "", "success")
+          };
+
+      });
+  </script>
 
 </body>
 </html>
