@@ -13,7 +13,6 @@
     <link href="css/myCss.css" rel="stylesheet">
 
 
-
 </head>
 <body>
 <!-- Start Page Loading -->
@@ -108,8 +107,11 @@
                         </div>
                     </div>
 
+                    <div class="btn-content">
+                        <button class="btn btn-default">查询</button>
+                    </div>
 
-                    <table class="table table-bordered table-striped preview-table" >
+                    <table class="table table-bordered table-striped preview-table">
                         <thead>
                         <tr>
                             <td>#</td>
@@ -123,22 +125,58 @@
                         </thead>
                         <tbody>
                         <tr>
-                           <td>8.00-8.30</td>
-                           <td>2</td>
-                           <td>2</td>
-                           <td>2</td>
-                           <td>2</td>
-                           <td>2</td>
-                           <td>2</td>
+                            <td>8.00-8.30</td>
+                            <td>
+                                <div>预约量：2/5</div>
+                                <div>取消预约：0</div>
+                            </td>
+                            <td>
+                                <div>预约量：2/5</div>
+                                <div>取消预约：0</div>
+                            </td>
+                            <td>
+                                <div>预约量：2/5</div>
+                                <div>取消预约：0</div>
+                            </td>
+                            <td>
+                                <div>预约量：2/5</div>
+                                <div>取消预约：0</div>
+                            </td>
+                            <td>
+                                <div>预约量：2/5</div>
+                                <div>取消预约：0</div>
+                            </td>
+                            <td>
+                                <div>预约量：2/5</div>
+                                <div>取消预约：0</div>
+                            </td>
                         </tr>
                         <tr>
-                            <td>8.30-9.00</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
+                            <td>8.00-8.30</td>
+                            <td>
+                                <div>预约量：2/5</div>
+                                <div>取消预约：0</div>
+                            </td>
+                            <td>
+                                <div>预约量：2/5</div>
+                                <div>取消预约：0</div>
+                            </td>
+                            <td>
+                                <div>预约量：2/5</div>
+                                <div>取消预约：0</div>
+                            </td>
+                            <td>
+                                <div>预约量：2/5</div>
+                                <div>取消预约：0</div>
+                            </td>
+                            <td>
+                                <div>预约量：2/5</div>
+                                <div>取消预约：0</div>
+                            </td>
+                            <td>
+                                <div>预约量：2/5</div>
+                                <div>取消预约：0</div>
+                            </td>
                         </tr>
                         </tbody>
                     </table>
@@ -151,7 +189,6 @@
 
 
 </div>
-
 
 
 <!-- ================================================
@@ -198,7 +235,6 @@ Sparkline
 <script type="text/javascript" src="js/sparkline/sparkline-plugin.js"></script>
 
 
-
 <!-- ================================================
 Moment.js
 ================================================ -->
@@ -207,15 +243,15 @@ Moment.js
 <script type="text/javascript" src="js/date-range-picker/daterangepicker.js"></script>
 
 <script type="text/javascript">
-    $(document).ready(function() {
-        $('#date-picker').daterangepicker({ singleDatePicker: true }, function(start, end, label) {
-            console.log(start.toISOString(), end.toISOString(), label);
-        });
-        $('#date-picker1').daterangepicker({ singleDatePicker: true }, function(start, end, label) {
-            console.log(start.toISOString(), end.toISOString(), label);
-        });
-
+  $(document).ready(function () {
+    $('#date-picker').daterangepicker({singleDatePicker: true}, function (start, end, label) {
+      console.log(start.toISOString(), end.toISOString(), label);
     });
+    $('#date-picker1').daterangepicker({singleDatePicker: true}, function (start, end, label) {
+      console.log(start.toISOString(), end.toISOString(), label);
+    });
+
+  });
 </script>
 
 </body>

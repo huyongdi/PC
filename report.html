@@ -13,7 +13,6 @@
     <link href="css/myCss.css" rel="stylesheet">
 
 
-
 </head>
 <body>
 <!-- Start Page Loading -->
@@ -80,14 +79,109 @@
                     <div class="panel-title">
                         报表
                     </div>
+
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="panel panel-default">
+
+                                <div class="panel-title">
+                                    报表1-集合导出
+                                    <ul class="panel-tools">
+                                        <li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
+                                        <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+                                        <!--<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>-->
+                                    </ul>
+                                </div>
+
+                                <div class="panel-body">
+                                    <div class=" time">
+                                        <span class="search-title">开始时间：</span>
+                                        <div class="control-group">
+                                            <div class="controls">
+                                                <div class="input-prepend input-group">
+                                                    <span class="add-on input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                    <input type="text" id="date-picker" class="form-control active" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" time">
+                                        <span class="search-title">结束时间：</span>
+                                        <div class="control-group">
+                                            <div class="controls">
+                                                <div class="input-prepend input-group">
+                                                    <span class="add-on input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                    <input type="text" id="date-picker1" class="form-control active" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" time" id="report-country">
+                                        <span class="search-title">国家：</span>
+                                        <select class="selectpicker" style="display: none;">
+                                            <option>美国</option>
+                                            <option>英国</option>
+                                            <option>加拿大</option>
+                                            <option>澳洲</option>
+                                            <option>新西兰</option>
+                                            <option>法国</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="getFile-content">
+                                        <button class="btn btn-default">导出文件</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 col-lg-6">
+                            <div class="panel panel-default">
+
+                                <div class="panel-title">
+                                    报表2-单个导出
+                                    <ul class="panel-tools">
+                                        <li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
+                                        <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+                                        <!--<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>-->
+                                    </ul>
+                                </div>
+
+                                <div class="panel-body long-time">
+                                    <div class=" time">
+                                        <span class="search-title">预约号:</span>
+                                        <div>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class=" time">
+                                        <span class="search-title">身份证或护照:</span>
+                                        <div>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="getFile-content">
+                                        <button class="btn btn-default">导出文件</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
         </div>
     </div>
 
-</div>
 
+</div>
 
 
 <!-- ================================================
@@ -134,7 +228,6 @@ Sparkline
 <script type="text/javascript" src="js/sparkline/sparkline-plugin.js"></script>
 
 
-
 <!-- ================================================
 Moment.js
 ================================================ -->
@@ -143,10 +236,15 @@ Moment.js
 <script type="text/javascript" src="js/date-range-picker/daterangepicker.js"></script>
 
 <script type="text/javascript">
-    $(document).ready(function() {
-
-
+  $(document).ready(function () {
+    $('#date-picker').daterangepicker({singleDatePicker: true}, function (start, end, label) {
+      console.log(start.toISOString(), end.toISOString(), label);
     });
+    $('#date-picker1').daterangepicker({singleDatePicker: true}, function (start, end, label) {
+      console.log(start.toISOString(), end.toISOString(), label);
+    });
+
+  });
 </script>
 
 </body>
